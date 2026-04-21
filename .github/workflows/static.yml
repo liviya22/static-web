@@ -11,4 +11,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Display Messages
         run: echo "static website"
+      - name: Secrets
+        run: echo "Secret Action Passed"
+        env:
+          DATABASE_PASS: ${{ secrets.DATABASE_PASS }}
 ```
