@@ -1,0 +1,12 @@
+name: CI/CD workflow for static website
+on:
+  push:
+    branches: [main]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Display Message
+      run: echo "static website"

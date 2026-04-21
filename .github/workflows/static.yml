@@ -1,13 +1,14 @@
+ ```yaml
 name: CI/CD workflow for static website
 on:
   push:
-    branch:[main]
+    branches: [main]
 jobs:
   build-and-deploy:
-    runs-on:Ubuntu-latest
-  steps:
-  -name:Checkout code:
-  uses:actions/checkout@v3:
-  -name:Display Message:
-  run: echo "static website"
-
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Display Messages
+        run: echo "static website"
+```
